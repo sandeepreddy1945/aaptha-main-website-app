@@ -1,4 +1,5 @@
 ---
+import SingleBrand from '~/components/common/SingleBrand.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
@@ -12,7 +13,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Custom Component Single Brand Logo -->
   <!--Decide if we need aaptha logo in contact page -->
-  <!-- <SingleBrand image={{ src: '~/assets/images/aaptha.png', alt: 'Aaptha Brand Logo' }} /> -->
+  <SingleBrand image={{ src: '~/assets/images/aaptha.png', alt: 'Aaptha Brand Logo' }} />
 
   <!-- HeroText Widget ******************* -->
 
