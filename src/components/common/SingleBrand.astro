@@ -1,0 +1,25 @@
+---
+import Image from '~/components/common/Image.astro';
+
+const { image = await Astro.slots.render('image') } = Astro.props;
+---
+
+<section class="border border-x-0 border-y-stroke bg-alabaster py-11 dark:border-y-strokedark dark:bg-black mt-4">
+  <div class="text-center max-w-c-1390 px-4 md:px-8 2xl:px-0 ">
+    <div class="animate_top mx-auto mx-w-full relative block h-30 sm:w-full md:w-full xl:w-[500px] ">
+      {
+        image && (
+          <div>
+            {typeof image === 'string' ? (
+              <Fragment set:html={image} />
+            ) : (
+              <Image class="opacity-65 transition-all duration-300 hover:opacity-100 " loading="eager" {...image} />
+            )}
+          </div>
+        )
+      }
+    </div>
+
+    <!-- <img class="opacity-85 transition-all duration-300 hover:opacity-100 dark" src={image} alt={name} /> -->
+  </div>
+</section>

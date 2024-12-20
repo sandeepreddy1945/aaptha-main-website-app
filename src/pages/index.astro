@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import SingleBrand from '~/components/common/SingleBrand.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Note from '~/components/widgets/Note.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+const metadata = {
+  title: 'Aaptha Elder Care Services',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <!-- Custom Component Single Brand Logo -->
+  <SingleBrand image={{ src: '~/assets/images/aaptha.png', alt: 'Aaptha Brand Logo' }} />
+
+  <!--Welcome Pic and Greeting -->
+  <Hero2
+    actions={[{ variant: 'primary', text: 'Contact Us', href: 'contact' }]}
+    image={{
+      src: '~/assets/images/aaptha-2.png',
+      alt: 'Aaptha Hero Image',
+    }}
+  >
+    <Fragment slot="title">
+      Aaptha Care <br />
+      <span class="text-accent dark:text-white highlight">Welcomes You</span>
+      <br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold">Care Driven by Empathy</span>
+    </Fragment>
+  </Hero2>
+
+  <Hero>
+    <Fragment slot="title">
+      <span class="xl:inline">What is</span>
+      <span class="text-accent dark:text-white highlight"> Aaptha </span> ?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="sm:inline">
+        <span class="font-semibold">Aaptha</span> is a companion which acts as a bridge in carrying love and care from the
+        children who live far away and delivering it to their secluded parents at their homes. We provide services that help
+        golden-agers (aged parents) to lead their twilight life contently and comfortably.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="aboutUs"
+    isReversed
+    tagline="Aaptha Elder Care Services"
+    title="About Us"
+    items={[
+      {
+        title: 'Our Roots',
+        description:
+          'Aaptha, initiated by Philadelphia Telangana Association, is an empathy-driven project organized by a group of NRI’s who understand the pain of missing elderly parents and explore solutions to not only solve for meeting daily activity requirements but also satisfy their emotional needs.',
+      },
+      {
+        title: 'Philadelphia Telangana Association',
+        description:
+          'Philadelphia Telangana Association (PTA) is a US-based 501(C)(3) tax-exempt charity with a mission to serve the community in the Philadelphia area and the Telangana community in India, in the areas of health, education, culture, art, environment, and rural development.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-3.png',
+      alt: 'Aaptha About Us Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Who Are We</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Current World Challenge -->
+
+  <!-- <Steps2
+    title="Current Day Challenge"
+    subtitle="Aaptha Elder Care Services"
+    items={[
+      {
+        title: 'Challenge',
+        icon: 'tabler:globe',
+        description:
+          'In this present IT-diffused world, not everyone is fortunate to secure a job and settle in the same place from where he or she is born and brought up. Since our birth, we tend to move from place to place for either better education or better career options, to have a better future in life. ',
+      },
+      {
+        title: 'Impact On Us',
+        icon: 'tabler:message-star',
+        description:
+          'In this long journey, we and our parents happen to endure many sacrifices. We miss our home, we miss our friends, we miss our locale and the toughest part is that we miss our most loved ones. Here is the dearth where our Aaptha plays its part.',
+      },
+    ]}
+  /> -->
+
+  <Features
+    id="features"
+    title="Current Day Challenge"
+    items={[
+      {
+        title: 'Challenge',
+        description:
+          'In this present IT-diffused world, not everyone is fortunate to secure a job and settle in the same place from where he or she is born and brought up. Since our birth, we tend to move from place to place for either better education or better career options, to have a better future in life. ',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Impact On Us',
+        description:
+          'In this long journey, we and our parents happen to endure many sacrifices. We miss our home, we miss our friends, we miss our locale and the toughest part is that we miss our most loved ones. Here is the dearth where our Aaptha plays its part. ',
+        icon: 'tabler:message-star',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Challenges Elderly Face"
+    items={[
+      {
+        title: 'Current Day Problems',
+        description: `Aging parents face many challenges in their golden age. Most common is their diminished ability to perform daily chores, monitor dietary restrictions, follow the prescription regimen, keep up with daily exercise and physiotherapy requirements, and incapacitation in general.`,
+      },
+      {
+        title: 'Our Mission',
+        description:
+          'Aaptha’s mission is to address these challenges with compassion as its core principle. Aaptha’s services cater to elderly needs at varying levels of assistance ranging from short-term on- demand services to long-term companionship needs. We like to achieve this at a reasonable cost, with the help of well-trained, paid volunteers who are genuinely concerned about these elderly needs, and most importantly share the same level of passion as that of the founders. This has been foundational to Aaptha’s execution plan.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-6.png',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Aaptha's Philosophy</h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Our Emphasis',
+        description:
+          'We put equal emphasis on both the physical and emotional wellbeing of our elderly population. The global pandemic further exposed isolation challenges causing higher stress among the elderly. This is more evident among parents that are used to seeing their children and grandchildren at least once every year or two years but now have been distanced for longer periods by restrictions in international travel. Aaptha recognizes this as a need that doesn’t often bubble up but requires attention. We train our volunteers to handle conversations, understand thoughts in ways that help the elderly feel emotionally balanced, facilitate programs that help relieve stress induced by loneliness.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-9.png',
+      alt: 'Aaptha Emphasis Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Aaptha's Emphasis to Elderly Problems
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Steps2
+    title="Our Misson And Vision"
+    subtitle="Aaptha Elder Care Services"
+    items={[
+      {
+        title: 'Our Mission',
+        description:
+          'Our mission is to help the golden agers, who denied their self and sacrificed their dreams for our bright futures, who taught us morals and values holding our fingers, to lead their twilight days comfortably and happily. ',
+      },
+      {
+        title: 'Our Vision',
+        description:
+          'We envision to build a trust in our clients that their bestowers of birth are leading a comfortable and content life in Aaptha’s safe and affectionate hands. We also envision to kindle moto of service in each individual in the society, irrespective of gender, profession or any sort of , by motivating them and then integrating them into helping these Golden Agers.',
+      },
+    ]}
+  />
+  <!-- Note Widget ******************* -->
+
+  <Note title="Our Progress Since 2021" content="" />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Services Given', amount: '120+' },
+      { title: 'Locations', amount: '25+' },
+      { title: 'Staff', amount: '40+' },
+    ]}
+  />
+</Layout>

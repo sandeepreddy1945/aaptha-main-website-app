@@ -1,0 +1,212 @@
+---
+import SingleBrand from '~/components/common/SingleBrand.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Custom Component Single Brand Logo -->
+  <SingleBrand image={{ src: '~/assets/images/aaptha.png', alt: 'Aaptha Brand Logo' }} />
+
+  <Hero tagline="Aaptha Elder Care">
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight"> Services Offerred</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Aaptha is a Non-Profit Organization, our prices are low when compared to other organizations, charges we collect
+      are spent on the Welfare of caregiver and activities we conduct for elderly well being.
+    </Fragment>
+  </Hero>
+
+  <!--Part time campanion ship -->
+  <Features2
+    title="Part-Time Care Campionship"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        description:
+          'This is a basic service we provide. We appoint care companions who will look after your dear parents.',
+      },
+      {
+        description: 'They visit the elder’s home according to the schedule which is twice or thrice generally.',
+      },
+      {
+        description:
+          'They assist the elders in doing some basic and essential activities like buying groceries, medicine, fruits & vegetables, etc.',
+      },
+      {
+        description: 'They also accompany and assist with social outings, park visits, any public gatherings, etc.',
+      },
+
+      {
+        description:
+          'Also, keen monitoring of your parent’s health condition would be done every time our companion visits.',
+      },
+      {
+        description:
+          'By spending time with them, our care companions would effectively help in avoiding the boredom and alienation that your parents might be facing or may be prone to.',
+      },
+      {
+        description:
+          'At last, a service that can be very soothing to your hearts is, our care companions will always be available to respond and do the needful in the case of emergency.',
+      },
+      {
+        description:
+          'For the role of care-companions, we choose effective individuals who are already comprising empathy and affection, and are further trained professionally in all manners to serve more effectively.',
+      },
+      {
+        description:
+          'We generally choose our companions students, housewives and retired employee who are innately motivated to serve people and society. With these Samaritans we ensure your parents or elders have a happy, safe and healthy time.',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Full-Time Care Companionship"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        description:
+          'Care-givers assist elders with activities in daily life including bathing, grooming, dressing, toileting etc.',
+      },
+      {
+        description: 'Care-givers guide elders to follow the diet advised to them by the nutritionists or the doctors.',
+      },
+      {
+        description: 'Care-givers assist elders with medication as per the schedule prescribed by physician.',
+      },
+      {
+        description:
+          'Care-givers monitor elders’ health conditions by checking their vitals on regular basis, and also checked anytime if required and the details are shared with the concerned people.',
+      },
+
+      {
+        description: 'Care-givers perform physiotherapy exercises as guided by the physiotherapist.',
+      },
+      {
+        description:
+          'Based on the client’s requirement care-givers help in house hold works like cooking, cleaning, washing etc.',
+      },
+      {
+        description:
+          'Aaptha designs indoor fun activities based on the elder’s health and mental condition which can give a great relief from the emotional sickness and isolation. Care-givers conduct these activities and ensure that elders participate.',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    callToAction={{ variant: 'primary', text: 'Register Now', href: '/' }}
+    items={[
+      {
+        title: 'In House Care',
+        description:
+          'Resident buddy is a service where a student or working employee would reside along with your parents in the same home. This service is focused mostly on avoiding the feeling of psychological loneliness in elders by offering a physical presence around them.  These resident buddies do all the services that are done by a part-time care companions except that they are excluded from tasks like cleaning, washing and cooking.',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-10.png',
+      alt: 'Resident Buddy',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Resident Buddy</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    callToAction={{ variant: 'primary', text: 'Register Now', href: '/' }}
+    items={[
+      {
+        title: 'Nursing Services',
+        description:
+          'Part-time and full-time nursing services are provided. Well qualified and experienced nurses would take care of your parents. As per your requirement, either full-time or part-time services can be availed.',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-11.png',
+      alt: 'Resident Buddy',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Home Care Nursing</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    callToAction={{ variant: 'primary', text: 'Register Now', href: '/' }}
+    items={[
+      {
+        title: 'No Commitment Assistance Services',
+        description:
+          'Elderly parents who are mostly self-sufficient but need some occasional assistance. As an example, they need assistance for visiting a hospital as an outpatient and going through multiple registration processes, tests, MRIs, scans, etc. OR combining multiple chores into a single-day activity like paying bills, visiting a bank, following up on land registration, etc.',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/aaptha-15.png',
+      alt: 'Resident Buddy',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        On-Demand, No Commitment Assistance
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Visit Our FAQ',
+        href: getPermalink('/faq'),
+      },
+      {
+        variant: 'secondary',
+        text: 'Client Testimonials',
+        href: getPermalink('/clientTestimonials'),
+      },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      <span class="sm:inline font-bold">
+        "In all our services, our care-companions will always be in touch with local diagnostic centres, hospitals,
+        doctors and ambulance services. If our volunteers find any decline in your parent’s health, it will be
+        immediately informed to you and with our backend team, the issue can be sort-out together. In emergency
+        situations, your local relatives will be contacted and co-ordinated in bringing down the situation into
+        control."</span
+      >
+    </Fragment>
+  </Hero>
+
+  <CallToAction
+    title="Want to Join Us?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Register Now',
+        href: '/',
+      },
+      {
+        variant: 'secondary',
+        text: 'Contact Us',
+        href: getPermalink('/contact'),
+      },
+    ]}
+  />
+</Layout>
