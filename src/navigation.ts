@@ -104,18 +104,24 @@ export const footerData = {
       target: '_blank',
     },
     {
-      ariaLabel: 'X',
+      ariaLabel: 'LinkedIn',
       icon: 'tabler:brand-linkedin',
       href: 'https://www.linkedin.com/company/aaptha-eldercare-service',
       target: '_blank',
     },
     {
-      ariaLabel: 'Github',
-      icon: 'tabler:brand-github',
-      href: 'https://github.com/onwidget/astrowind',
+      ariaLabel: 'Google Map',
+      icon: 'tabler:brand-google-maps',
+      href: 'https://www.google.com/maps/dir/?api=1&destination=500080',
       target: '_blank',
     },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    {
+      ariaLabel: 'Github',
+      icon: 'tabler:brand-github',
+      href: 'https://github.com/sandeepreddy1945/aaptha-main-website-app',
+      target: '_blank',
+    },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml'), target: '_blank' },
   ],
   footNote: `
     ©2021 by Aaptha Elder-Care Services · All rights reserved.

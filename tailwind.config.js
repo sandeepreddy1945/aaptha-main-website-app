@@ -12,8 +12,8 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
-        stroke: "#EEEEEE",
-        strokedark: "#2D2F40",
+        stroke: '#EEEEEE',
+        strokedark: '#2D2F40',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
@@ -23,9 +23,9 @@ export default {
 
       animation: {
         fade: 'fadeInUp 1s both',
-        line1: "line 3s linear infinite",
-        line2: "line 6s linear infinite",
-        line3: "line 9s linear infinite",
+        line1: 'line 3s linear infinite',
+        line2: 'line 6s linear infinite',
+        line3: 'line 9s linear infinite',
       },
 
       keyframes: {
@@ -37,7 +37,6 @@ export default {
           '0%, 100%': { transform: 'translateY(100%)' },
           '50%': { transform: 'translateY(0)' },
         },
-        
       },
     },
   },
