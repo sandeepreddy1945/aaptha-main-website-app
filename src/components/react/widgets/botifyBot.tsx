@@ -1,8 +1,7 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import ChatBot, { useToasts } from 'sandeep-react-chatbotify';
 import roboticon from '~/assets/favicons/roboticon.svg';
 import './style.css';
-import { useToasts } from "sandeep-react-chatbotify";
-import ChatBot from 'sandeep-react-chatbotify';
 
 // const ChatBot = lazy(() => import('react-chatbotify'));
 
@@ -11,7 +10,7 @@ export default function BotifyBot() {
   const { showToast } = useToasts();
   useEffect(() => {
     setIsLoaded(true);
-    showToast("Hello, I'm a toast message!", 3000)
+    showToast("Hello, I'm a toast message!", 3000);
   }, []);
   const id = 'my-chatbot-id';
   const flow = {
