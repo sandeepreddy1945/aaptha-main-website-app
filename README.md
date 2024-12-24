@@ -5,7 +5,6 @@
 
 <br>
 
-
 # Aaptha Elder Care Service
 
 <img src="images/aaptha-1.png" alt="Aaptha Page">

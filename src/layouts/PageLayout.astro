@@ -6,6 +6,7 @@ import Footer from '~/components/widgets/Footer.astro';
 import { headerData, footerData } from '~/navigation';
 
 import type { MetaData } from '~/types';
+import AapthaChatBot from '~/components/widgets/AapthaChatBot.astro';
 
 export interface Props {
   metadata?: MetaData;
@@ -20,6 +21,9 @@ const { metadata } = Astro.props;
   </slot>
   <main>
     <slot />
+    <slot name="chatbot">
+      <AapthaChatBot />
+    </slot>
   </main>
   <slot name="footer">
     <Footer {...footerData} />
